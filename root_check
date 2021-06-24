@@ -7,5 +7,15 @@ echo
 echo "you need root access"
 exit 1 
 fi
-free -m
-exit 99
+## Chek number of processors
+
+ if [ `nproc` -eq 1 ]
+then
+echo "this server is very small"
+exit 2
+fi
+
+# Checking memory
+free -m 
+exit 0
+>>>>>>> f2ac220720dcdb8570baca17e038a3ecd52bed50
